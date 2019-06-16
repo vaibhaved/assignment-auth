@@ -1,0 +1,171 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+	font-family: 'codropsicons';
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+	font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.box {
+    width: 100%;
+    box-align: center;
+    display: flex;
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+}
+
+.childBox1, .childBox2 {
+    display: inline-block;
+}
+
+.childBox1 {
+    width: 50%;
+    padding: 20px;
+    border-radius: 25px 0 0 25px;
+    background-color: white;
+    color: #e74c3c;
+    box-shadow: 2em;
+    text-align: center;
+}
+
+.childBox1 > h1 {
+    color: #893027;
+    background: radial-gradient(circle, #f22, #e74 14.25%, #893027 28.5%, #f22);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.row {
+    width: 100%;
+    display: block;
+}
+
+.column {
+    width: 100%;
+    display: inline-block;
+    line-height: 3.0;
+}
+
+.columnSignUp {
+    width: 100%;
+    display: inline-block;
+    line-height: 2.0;
+}
+
+.theInputs {
+    position: relative;
+    box-shadow: none;
+    background-color: white;
+    border: 3px solid #893027;
+    border-radius: 25px;
+    font-weight: bold;
+    padding: 5px 5px 5px 10px;
+    color: #e74c3c;
+}
+
+.theInputs:focus {
+    outline: 0;
+}
+
+.signinButton, .signupButton {
+    width: 60%;
+    padding: 5px;
+    background-color: #e74c3c;
+    color: white;
+    border: 0px solid #e74c3c;
+    border-radius: 25px;
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.6);
+    background: radial-gradient(circle, #f22, #893027 100%, #f22);
+    background-color: transparent;
+    -webkit-background-clip: button;
+    background-clip: button;
+}
+
+.signinButton:focus, .signupButton:focus {
+    outline: 0;
+}
+
+.signinButton:active, .signupButton:active {
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.6);
+}
+
+.forgotPassword {
+    font-size: 16px;
+    background: none;
+    color: #e74c3c;
+    border: none;
+}
+
+.forgotPassword:focus {
+    outline: 0;
+}
+
+.forgotPassword:active {
+    color: #893027;
+}
+
+.childBox2 {
+    width: 50%;
+    border-radius: 0 25px 25px 0;
+}
+
+.childBox2 > img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+.childBox2 > div {
+    top: 0;
+    left: 50%;
+    position: absolute;
+    width: inherit;
+    height: 100%;
+    background-color: rgb(137, 48, 39);
+    opacity: 0.6;
+    overflow: hidden;
+    border-radius: inherit;
+}
+
+@media screen and (max-width: 900px) {
+    .childBox1 {
+        width: 100%;
+        border-radius: 25px;
+        padding: 5px;
+    }
+    .childBox2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .columnSignUp > i {
+        display: none;
+    }
+    .column > i {
+        display: none;
+    }
+}
