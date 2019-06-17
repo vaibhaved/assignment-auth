@@ -24,10 +24,10 @@ module.exports = function newUserValidation(data) {
     if(Validator.isEmpty(data.password)) {
         errors.password = "Password is required";
     }
-    reg=/^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z]).{8}$/;
+    /* reg=/^(?=.*[A-Z])(?=.*[!@#$&*])(?=.*\d)(?=.*[a-z]).{8,}$/;
     if(!reg.test(data.password)) {
         errors.passwordType = "Password must contain atleast 8 characters and must have atleast one Uppercase letter, one Lowercase Letter, a Number, and a special character";
-    }
+    } */
 
     return {
         errors,

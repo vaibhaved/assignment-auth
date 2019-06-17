@@ -8,16 +8,6 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
-function copy() {
-	var section1=document.getElementById('section-1');
-	var section2=document.getElementById('section-2');
-	var section3=document.getElementById('section-3');
-	var section4=document.getElementById('section-4');
-	section3.innerHTML=section1.innerHTML;
-	section4.innerHTML=section2.innerHTML;
-}
-
-copy();
 
  (function() {
 

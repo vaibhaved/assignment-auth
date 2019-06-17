@@ -46,7 +46,7 @@ router.post("/login", (req,res) => {
 
     User.findOne({email:req.body.email}).then(user => {
         if(!user) {
-            return res.status(400).json({emailnotfound: "Email Not Found"});
+            return res.status(404).json({emailnotfound: "Email Not Found"});
         }
         bcrypt.compare(req.body.password,user.password).then(isMatch => {
             if(isMatch) {
@@ -63,7 +63,7 @@ router.post("/login", (req,res) => {
                     (err,token) => {
                         res.json({
                             success : true,
-                            token : 'Bearer' + token
+                            token : token
                         })
                     }
                 )
