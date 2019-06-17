@@ -51,7 +51,7 @@ class Client extends React.Component {
 								            <div className="row">
 									            <div className="column">
 									    	        <i className="far fa-user"></i>&nbsp;
-									    		    <input autoComplete="off" className="theInputs" type="text" placeholder="Username" required />
+									    		    <input autoComplete="off" className="theInputs" type="text" placeholder="Email" required />
 								    		    </div>
 							    			    <div className="column">
 							    				    <i className="fas fa-unlock-alt"></i>&nbsp;
@@ -87,13 +87,9 @@ class Client extends React.Component {
 										            <input autoComplete="off" className="theInputs" type="text" placeholder="First Name" required />
 									            </div>
 									            <div className="columnSignUp">
-    										        <i className="fas fa-i-cursor"></i>&nbsp;
+    										        <i className="far fa-user"></i>&nbsp;
 	    									        <input autoComplete="off" className="theInputs" type="text" placeholder="Last Name" required />
 										        </div>
-		    							        <div className="columnSignUp">
-											        <i className="far fa-user"></i>&nbsp;
-				    							    <input autoComplete="off" className="theInputs" type="text" placeholder="Username" required />
-					    					    </div>
 						    				    <div className="columnSignUp">
 								    			    <i className="fas fa-at"></i>&nbsp;
 									    		    <input autoComplete="off" className="theInputs" type="email" placeholder="Email" required />
