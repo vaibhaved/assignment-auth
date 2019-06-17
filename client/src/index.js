@@ -44,7 +44,9 @@ class Client extends React.Component {
 			password: this.state.register.password,
 		};
 
-		fetch('http://localhost:4000/api/users/register' , {
+		var port = process.env.PORT;
+		console.log(port);
+		fetch('/api/users/register' , {
       		method: "POST",
       		headers: {
         		'Content-Type': 'application/json'
@@ -69,7 +71,7 @@ class Client extends React.Component {
 			password: this.state.login.password,
 		};
 
-		fetch('http://localhost:4000/api/users/login' , {
+		fetch('/api/users/login' , {
       		method: "POST",
       		headers: {
         		'Content-Type': 'application/json'
@@ -133,7 +135,7 @@ class Client extends React.Component {
 							    <div className="childBox1">
 							        <h1>LOGIN</h1>
 						            <div id="col">
-							            <form className="loginForm" encType="application/json" autoComplete="off" onSubmit={this.onSubmitLogin} method="post" action="http://localhost:4000/api/users/login">
+							            <form className="loginForm" encType="application/json" autoComplete="off" onSubmit={this.onSubmitLogin} method="post">
 								            <div className="row">
 									            <div className="column">
 									    	        <i className="far fa-user"></i>&nbsp;
@@ -168,7 +170,7 @@ class Client extends React.Component {
 					            <div className="childBox1">
 						            <h1>SIGN UP</h1>
 						            <div id="col">
-								        <form className="signupForm" autoComplete="off" encType="application/json" onSubmit={this.onSubmitRegister} method="post" action="http://localhost:4000/api/users/register">
+								        <form className="signupForm" autoComplete="off" encType="application/json" onSubmit={this.onSubmitRegister} method="post">
 									        <div className="row">
 										        <div className="columnSignUp">
 											        <i className="fas fa-font"></i>&nbsp;
